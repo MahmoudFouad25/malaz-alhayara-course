@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملاذ الحيارى - خريطة البحث عن المأوى للقلوب التائهة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        .main-title {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #fff, #f0f8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .description {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .content-section {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #f0f8ff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .video-card {
+            background: rgba(255,255,255,0.15);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .video-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .video-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #f0f8ff;
+        }
+
+        .video-frame {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .watch-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+        }
+
+        .watch-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(238, 90, 36, 0.6);
+        }
+
+        .key-insights {
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .insight-item {
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .insight-item:last-child {
+            border-bottom: none;
+        }
+
+        .insight-icon {
+            color: #ffd700;
+            margin-left: 10px;
+            font-size: 1.2em;
+        }
+
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hashtags {
+            font-size: 1.1em;
+            color: #87ceeb;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5em;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-frame {
+                height: 250px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- الرأس -->
+        <div class="header">
+            <h1 class="main-title">ملاذ الحيارى</h1>
+            <p class="subtitle">خريطة البحث عن المأوى للقلوب التائهة</p>
+            <div class="description">
+                رحلة حقيقية للقلوب التعبانة... دليل عملي للي نفسهم يرجعوا لنفسهم بجد..
+                <br><strong>لا مكان للبروتات والسميعة... دي رحلة لحظة الصدق</strong>
+            </div>
+        </div>
+
+        <!-- اللقاء الأول -->
+        <div class="content-section">
+            <h2 class="section-title">🌅 اللقاء الأول: الاستيقاظ - لحظة الصدق</h2>
+            
+            <div class="key-insights">
+                <h3>🎯 رحلة الكشف عبر 4 أسئلة جوهرية:</h3>
+                <div class="insight-item">
+                    <span class="insight-icon">🔍</span>
+                    <strong>الكشف الأول:</strong> تشخيص الأعراض - كسر جدار الإنكار
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🎭</span>
+                    <strong>الكشف الثاني:</strong> فضح الحلول الوهمية الثلاثة
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🗺️</span>
+                    <strong>الكشف الثالث:</strong> خارطة الغربات الأربع
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🎭</span>
+                    <strong>الكشف الرابع:</strong> كشف الأقنعة السبعة المتراكمة
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <!-- الفيديو الأول -->
+                <div class="video-card">
+                    <h3 class="video-title">🎬 المقدمة والسؤال الأول</h3>
+                    <div class="video-description">
+                        <strong>"في أي لحظة من يومك تحس أنك لست أنت؟"</strong>
+                        <br>كسر جدار الإنكار وإقرار وجود المشكلة - الضيق الذي لا اسم له
+                    </div>
+                    <iframe class="video-frame" src="https://www.youtube.com/embed/GlIrvAazC2I" allowfullscreen></iframe>
+                    <a href="https://youtu.be/GlIrvAazC2I" target="_blank" class="watch-btn">شاهد على اليوتيوب</a>
+                </div>
+
+                <!-- الفيديو الثاني -->
+                <div class="video-card">
+                    <h3 class="video-title">💭 السؤال الثاني</h3>
+                    <div class="video-description">
+                        <strong>"ما الذي تبحث عنه حقاً في كل محاولاتك؟"</strong>
+                        <br>فضح الأوهام الثلاثة: الإضافة، الإزالة، والتجاوز
+                    </div>
+                    <iframe class="video-frame" src="https://www.youtube.com/embed/NlZ6k0zsOcA" allowfullscreen></iframe>
+                    <a href="https://youtu.be/NlZ6k0zsOcA" target="_blank" class="watch-btn">شاهد على اليوتيوب</a>
+                </div>
+
+                <!-- الفيديو الثالث -->
+                <div class="video-card">
+                    <h3 class="video-title">🗺️ السؤال الثالث</h3>
+                    <div class="video-description">
+                        <strong>"أين بالضبط يسكن هذا الثقل في جسدك؟"</strong>
+                        <br>خارطة الغربات الأربع: الفطرة، المعنى، الأخلاق، والأُنس
+                    </div>
+                    <iframe class="video-frame" src="https://www.youtube.com/embed/kBe6_x_xAog" allowfullscreen></iframe>
+                    <a href="https://youtu.be/kBe6_x_xAog" target="_blank" class="watch-btn">شاهد على اليوتيوب</a>
+                </div>
+
+                <!-- الفيديو الرابع -->
+                <div class="video-card">
+                    <h3 class="video-title">🎭 السؤال الرابع</h3>
+                    <div class="video-description">
+                        <strong>"أي قناع التصق بوجهك حتى نسيت أنه قناع؟"</strong>
+                        <br>كشف الأقنعة السبعة وآليات الحماية المزيفة
+                    </div>
+                    <iframe class="video-frame" src="https://www.youtube.com/embed/8X1BYxgcyFc" allowfullscreen></iframe>
+                    <a href="https://youtu.be/8X1BYxgcyFc" target="_blank" class="watch-btn">شاهد على اليوتيوب</a>
+                </div>
+
+                <!-- الفيديو الخامس -->
+                <div class="video-card">
+                    <h3 class="video-title">📝 الخاتمة والمهمة</h3>
+                    <div class="video-description">
+                        <strong>خاتمة اللقاء ومهمة الأسبوع والاستعداد للقاء التالي</strong>
+                        <br>التأمل الصامت والسؤال المحوري للأسبوع القادم
+                    </div>
+                    <iframe class="video-frame" src="https://www.youtube.com/embed/eEY9Ag8JsgA" allowfullscreen></iframe>
+                    <a href="https://youtu.be/eEY9Ag8JsgA" target="_blank" class="watch-btn">شاهد على اليوتيوب</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- المهمة العملية -->
+        <div class="content-section">
+            <h2 class="section-title">📋 المهمة العملية للأسبوع</h2>
+            <div class="key-insights">
+                <h3>🧘‍♂️ تأمل صامت لمدة 10 دقائق يومياً:</h3>
+                <div class="insight-item">
+                    <span class="insight-icon">🔹</span>
+                    <strong>اسأل نفسك:</strong> "ما القناع الذي لا أستطيع خلعه؟"
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🔹</span>
+                    <strong>ثم اسأل:</strong> "ما الذي أخاف أن يراه الناس فيّ فيتركوني؟"
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🔹</span>
+                    <strong>المطلوب:</strong> راقب ما يظهر في وعيك دون حكم أو مقاومة
+                </div>
+            </div>
+        </div>
+
+        <!-- اللقاءات القادمة -->
+        <div class="content-section">
+            <h2 class="section-title">🔮 ما ينتظرنا في الرحلة القادمة</h2>
+            <div class="key-insights">
+                <div class="insight-item">
+                    <span class="insight-icon">🔍</span>
+                    <strong>السؤال الخامس:</strong> متى بالضبط تعلمت أن تحمي نفسك بهذه الطريقة؟
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">💫</span>
+                    <strong>السؤال السادس:</strong> ما الشوق المدفون الذي رفض أن يموت بداخلك؟
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🌱</span>
+                    <strong>السؤال السابع:</strong> ما الذي لم تستطع الحياة أن تقتله بداخلك؟
+                </div>
+            </div>
+        </div>
+
+        <!-- التواصل -->
+        <div class="contact-section">
+            <h2 class="section-title">📲 انضم للرحلة</h2>
+            <p style="font-size: 1.2em; margin-bottom: 25px;">
+                للانضمام المجاني ومتابعة باقي اللقاءات
+            </p>
+            
+            <a href="https://chat.whatsapp.com/E4AbTPKC2H7H2pFPVS80vp" target="_blank" class="whatsapp-btn">
+                📱 المجموعة الأولى
+            </a>
+            
+            <a href="https://chat.whatsapp.com/Cllbl9V0dLD2Vno2ZXg5T0" target="_blank" class="whatsapp-btn">
+                📱 المجموعة الثانية
+            </a>
+            
+            <p style="margin-top: 20px; opacity: 0.9;">
+                مجموعتان لاستيعاب أكبر عدد من المشاركين
+            </p>
+        </div>
+
+        <!-- التذييل -->
+        <div class="footer">
+            <p style="font-size: 1.3em; margin-bottom: 15px;">
+                بالتوفيق.. والله يتولانا وإياكم بعنايته
+            </p>
+            
+            <div class="hashtags">
+                #ملاذ_الحيارى #ارتواء #رحلة_العودة #لحظة_الصدق
+            </div>
+        </div>
+    </div>
+</body>
+</html>
