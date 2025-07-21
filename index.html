@@ -40,10 +40,24 @@
             font-weight: bold;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            background: linear-gradient(45deg, #fff, #f0f8ff);
+            background: linear-gradient(45deg, #fff, #f0f8ff, #87ceeb, #ffd700, #fff);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: gradientMove 4s ease-in-out infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .subtitle {
@@ -232,16 +246,15 @@
         <!-- الرأس -->
         <div class="header">
             <h1 class="main-title">ملاذ الحيارى</h1>
-            <p class="subtitle">خريطة البحث عن المأوى للقلوب التائهة</p>
+            <p class="subtitle">الاستيقاظ - لحظة الصدق</p>
             <div class="description">
-            مع الكوتش محمود فؤاد
-                <br><strong> رحلة من عدة لقاءات .. هنا ستجد تسجيل أول لقائين بشكل كامل  </strong>
+                <span style="font-size: 1.4em; font-weight: bold; color: #ffd700; text-align: center; display: block;">مع الكوتش محمود فؤاد</span>
             </div>
         </div>
 
         <!-- اللقاء الأول -->
         <div class="content-section">
-            <h2 class="section-title">🌅 اللقاء الأول: الاستيقاظ - لحظة الصدق</h2>
+            <h2 class="section-title">🌅 اللقاء الأول</h2>
             
             <div class="key-insights">
                 <h3>🎯 رحلة الكشف عبر 4 أسئلة جوهرية:</h3>
@@ -260,6 +273,10 @@
                 <div class="insight-item">
                     <span class="insight-icon">🎭</span>
                     <strong>الكشف الرابع:</strong> كشف الأقنعة السبعة المتراكمة
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">📋</span>
+                    <strong>المهمة العملية للأسبوع الأول</strong>
                 </div>
             </div>
 
@@ -343,21 +360,25 @@
 
         <!-- اللقاء الثاني -->
         <div class="content-section">
-            <h2 class="section-title">🌟 اللقاء الثاني: الاستيقاظ - إكمال الرحلة</h2>
+            <h2 class="section-title">🌟 اللقاء الثاني</h2>
             
             <div class="key-insights">
-                <h3>🎯 إكمال الأسئلة الثلاثة الأخيرة:</h3>
+                <h3>🎯 استكمال رحلة الكشف:</h3>
                 <div class="insight-item">
-                    <span class="insight-icon">🔍</span>
-                    <strong>السؤال الخامس:</strong> متى بالضبط تعلمت أن تحمي نفسك بهذه الطريقة؟ - رحلة إلى الجرح الأول
+                    <span class="insight-icon">🛡️</span>
+                    <strong>الكشف الخامس:</strong> رحلة إلى الجرح الأول الذي ولّد أول قناع
                 </div>
                 <div class="insight-item">
-                    <span class="insight-icon">💫</span>
-                    <strong>السؤال السادس:</strong> ما الشوق المدفون الذي رفض أن يموت بداخلك؟ - اكتشاف البوصلة الداخلية
+                    <span class="insight-icon">✨</span>
+                    <strong>الكشف السادس:</strong> اكتشاف البوصلة الداخلية - خريطتك الحقيقية
                 </div>
                 <div class="insight-item">
                     <span class="insight-icon">🌱</span>
-                    <strong>السؤال السابع:</strong> ما الذي لم تستطع الحياة أن تقتله بداخلك؟ - البذرة الحية
+                    <strong>الكشف السابع:</strong> البذرة الحية التي تحمل بذور التحول
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">📋</span>
+                    <strong>المهمة العملية للأسبوع الثاني</strong>
                 </div>
             </div>
 
@@ -421,117 +442,46 @@
 
         <!-- المهمة العملية للأسبوع الثاني -->
         <div class="content-section">
-            <h2 class="section-title">🌱 المهمة العملية: "إيقاظ البذرة النائمة"</h2>
+            <h2 class="section-title">📋 المهمة العملية</h2>
             
             <div class="key-insights">
-                <h3>💌 المهمة الأساسية: رسالة يومية للطفل الداخلي</h3>
+                <h3>🧘‍♂️ جلسة تأمل يومية (10 دقائق):</h3>
                 <div class="insight-item">
-                    <span class="insight-icon">⏰</span>
-                    <strong>كل يوم لمدة 10 دقائق:</strong> اقعد مع نفسك واكتب رسالة للطفل اللي جواك
+                    <span class="insight-icon">🔹</span>
+                    <strong>اسأل نفسك:</strong> "إيه الشوق اللي لسه حي جوايا رغم كل حاجة؟"
                 </div>
                 <div class="insight-item">
-                    <span class="insight-icon">✍️</span>
-                    <strong>ابدأ الرسالة بـ:</strong> "عزيزي الطفل الصغير اللي جوايا..."
+                    <span class="insight-icon">🔹</span>
+                    <strong>ثم اسأل:</strong> "إيه اللي جوايا رفض يموت مهما حصل؟"
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🔹</span>
+                    <strong>المطلوب:</strong> راقب ما يظهر في وعيك دون حكم أو مقاومة
+                </div>
+                <div class="insight-item">
+                    <span class="insight-icon">🔹</span>
+                    <strong>وأخيراً:</strong> أدعي كتيير ربنا مثلا قول: "يا رب... خليني أعيش الشوق ده صح بأخلاق ترضي بيها عني... مش أخبيه ورا قناع علشان أرضي الناس" أو "اللهم لا تكلني إلي نفسي ولا لأحد من خلقك طرفة عين" وهكذا
                 </div>
             </div>
 
             <div class="key-insights" style="background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,215,0,0.1)); border-left: 5px solid #ffd700;">
-                <h3>📅 أمثلة لبدايات رسائل الأسبوع:</h3>
+                <h3>🤲 لحظة إنابة يومية:</h3>
                 <div class="insight-item">
-                    <span class="insight-icon">🌅</span>
-                    <strong>اليوم الأول:</strong> "أنا شايفك أوي دلوقتي .. آسف إني سبتك وحيد كل الوقت ده..."
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">☀️</span>
-                    <strong>اليوم الثاني:</strong> "أنا فهمت ليه خفت... وحقك تخاف... لكن أنا معاك دلوقتي إطمن حس بالأمان..."
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">🌟</span>
-                    <strong>اليوم الثالث:</strong> "انت كنت شجاع... عملت اللي تقدر عليه وقتها..."
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">🛡️</span>
-                    <strong>اليوم الرابع:</strong> "مش لازم تحمي نفسك بالأقنعة تاني.. محتاج تهدي... أنا هحميك .. وهنستعين بالله يكفينا شرور الحياة والناس"
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">💫</span>
-                    <strong>اليوم الخامس:</strong> "الشوق اللي جواك جميل... ومش عيب تحلم..."
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">❤️</span>
-                    <strong>اليوم السادس:</strong> "انت تستحق الحب... من غير شروط... من غير أقنعة..."
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">🤲</span>
-                    <strong>اليوم السابع:</strong> "تعال نتوب سوا .. نصلي سوا... تعال نرجع لربنا سوا ... نستمسك بالعروة الوثقي سوا..."
-                </div>
-            </div>
-
-            <div class="key-insights" style="background: linear-gradient(135deg, rgba(0,255,127,0.2), rgba(0,255,127,0.1)); border-left: 5px solid #00ff7f;">
-                <h3>📋 تعليمات مهمة:</h3>
-                <div class="insight-item">
-                    <span class="insight-icon">✅</span>
-                    <strong>اكتب بإيدك:</strong> مش على الكمبيوتر
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">🔒</span>
-                    <strong>خصوصية تامة:</strong> متخليش حد يشوف اللي كاتبه
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">😢</span>
-                    <strong>لو جالك عياط:</strong> اتركه يطلع... ده طبيعي وصحي
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">💙</span>
-                    <strong>بدون لوم:</strong> لو مقدرتش تكمل يوم، كمل تاني يوم برفق
+                    <span class="insight-icon">🌙</span>
+                    <strong>قبل النوم، قول بصدق:</strong> "يا رب... أنا عاوز أرجع ليك... خد بإيدي ليك وردني إليك مرداً جميلاً.."
                 </div>
             </div>
 
             <div class="key-insights" style="background: linear-gradient(135deg, rgba(138,43,226,0.2), rgba(138,43,226,0.1)); border-left: 5px solid #8a2be2;">
-                <h3>🎯 التحدي الإضافي (للمستعدين):</h3>
-                <p style="margin-bottom: 15px;"><strong>مرة واحدة بس في الأسبوع، اعمل حاجة من دول:</strong></p>
+                <h3>🎯 تحدي الأسبوع (اختياري):</h3>
                 <div class="insight-item">
-                    <span class="insight-icon">🌟</span>
-                    <strong>اخلع قناع:</strong> انزل مع صحابك من غير قناع واحد (بدون مكياج، لبس بسيط، كن طبيعي أكتر)
+                    <span class="insight-icon">⭐</span>
+                    <strong>مرة واحدة</strong> الأسبوع ده، اعمل حاجة من <strong>أخلاق شوقك الحقيقي</strong> بدل ما تعملها من "القناع"
                 </div>
                 <div class="insight-item">
-                    <span class="insight-icon">🚫</span>
-                    <strong>قول "لأ":</strong> لحد طلب منك حاجة وانت مش عاوز تعملها (بس برفق ولطف)
+                    <span class="insight-icon">💡</span>
+                    <strong>مثال:</strong> ساعد حد عشان ربنا يحبك ويرضي عنك، مش عشان الناس تشوفك طيب
                 </div>
-                <div class="insight-item">
-                    <span class="insight-icon">💭</span>
-                    <strong>شارك رأيك:</strong> قول رأيك الحقيقي في موقف كنت هتسكت فيه
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">📞</span>
-                    <strong>اتكلم بصراحة:</strong> اتصل على حد وقوله "أنا زعلان منك في موضوع كذا"
-                </div>
-            </div>
-
-            <div class="key-insights" style="background: linear-gradient(135deg, rgba(255,20,147,0.2), rgba(255,20,147,0.1)); border-left: 5px solid #ff1493;">
-                <h3>💝 الهدف من المهمة:</h3>
-                <div class="insight-item">
-                    <span class="insight-icon">🌱</span>
-                    نبدأ نكلم الطفل اللي جوانا بحب... بدل اللوم والإهمال
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">🎭</span>
-                    نبدأ نعيش شوية شوية بدون أقنعة
-                </div>
-                <div class="insight-item">
-                    <span class="insight-icon">🌞</span>
-                    نخلي البذرة تحس بالأمان... فتبدأ تطلع للنور
-                </div>
-            </div>
-
-            <div class="key-insights" style="background: linear-gradient(135deg, rgba(255,69,0,0.2), rgba(255,69,0,0.1)); border-left: 5px solid #ff4500;">
-                <h3>⚠️ تنبيه مهم:</h3>
-                <p style="font-size: 1.1em; line-height: 1.8;">
-                    <strong>لو حسيت بمقاومة شديدة... لو الموضوع بقى صعب أوي...</strong><br>
-                    ماتجبرش نفسك... خد راحتك... كلمنا...<br>
-                    <strong>احنا مش في سباق... احنا في رحلة شفاء...</strong><br>
-                    والشفاء محتاج صبر... محتاج حب... محتاج وقت...
-                </p>
             </div>
         </div>
 
@@ -551,8 +501,18 @@
             </a>
             
             <p style="margin-top: 20px; opacity: 0.9;">
-                مجموعتان لاستيعاب أكبر عدد من المشاركين .. انضم لأحدهما فقط فكلاهما سيكون عليه نفس الروابط والتفاعلات..
+                دول مجموعتان لاستيعاب أكبر عدد من المشاركين، من فضلك انضم لواحدة منهم فقط..
+                <br>كل واحدة منهم هينزل عليها نفس المحتوى
             </p>
+            
+            <div style="margin-top: 40px; padding: 25px; background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1)); border-radius: 15px; border: 1px solid rgba(255,255,255,0.3);">
+                <h3 style="color: #ffd700; margin-bottom: 15px; font-size: 1.4em;">🌟 شارك هذه الرحلة مع غيرك</h3>
+                <p style="font-size: 1.1em; line-height: 1.6;">
+                    لو الرحلة دي لمست قلبك... ولو حسيت إنها ممكن تساعد حد تحبه... <br>
+                    <strong>شاركها معاه</strong> ❤️<br>
+                    أحياناً كلمة في وقتها تكون سبب في إنقاذ روح تائهة... وتكون أنت سبب في هدايتها
+                </p>
+            </div>
         </div>
 
         <!-- التذييل -->
